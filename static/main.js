@@ -20,8 +20,10 @@ $("path, circle").hover(function(e) {
       return false;
     });
   }
+// for statment 1 ~ 50 for get state
 
-const open = document.getElementById("' + data[37][37+4] + '");
+const open = document.getElementById("' + state_data[37] + '");
+
 const data_container = document.getElementById('data-container');
 const close = document.getElementById('close');
 
