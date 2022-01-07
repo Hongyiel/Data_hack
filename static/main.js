@@ -20,3 +20,15 @@ $("path, circle").hover(function(e) {
       return false;
     });
   }
+
+const open = document.getElementById("' + data[37][37+4] + '");
+const data_container = document.getElementById('data-container');
+const close = document.getElementById('close');
+
+open.addEventListener('click', () => {
+  data_container.classList.add('show');
+});
+
+close.addEventListener('click', () => {
+  data_container.classList.remove('show');
+});
