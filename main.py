@@ -8,17 +8,15 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template("index.html")
+    return render_template("index.html", response_info=response_info)
+
 
 if __name__ == '__main__':
-    app.run(debug = True, port=5001)
-
+    app.run(debug=True, port=5001)
 
 response = requests.get("https://api.covidactnow.org/v2/states.json?apiKey=8d65e6de718b4c6da48d818e9a204909").text
 # load data from json parser
 response_info = json.loads(response)
 
-
-
-#Start get_data.py
+# Start get_data.py
 get_data._data(response_info)
