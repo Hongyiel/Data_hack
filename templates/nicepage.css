@@ -4639,7 +4639,7 @@ ol {
 .u-btn {
   /*display: inline-block;*/
   display: table;
-  /*maye need another solution for negative marin*/
+  /*TODO maye need another solution for negative marin*/
   cursor: pointer;
   color: inherit;
   font-size: inherit;
