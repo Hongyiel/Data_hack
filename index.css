@@ -2,14 +2,10 @@
     background-color: red;
     color: white;
     border: 2px solid black;
-    margin: 20px;
-    padding: 20px;
+    float: left;
+    width: 300px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
   }
 
-.videobox{
-      border:2px solid black;
-      width: 300px;
-     padding: 50px;
-     margin: 20px;
-    
-  }
