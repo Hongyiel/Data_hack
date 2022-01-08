@@ -42,7 +42,7 @@
     padding: 10px 25px;
   }
 
-  .data-container{
+  .data-container1{
     background-color: rgba(0, 0, 0, 0);
     position: fixed;
     align-items: center;
@@ -56,12 +56,12 @@
     width: 100vw;
   }
 
-  .data-container.show{
+  .data-container1.show{
     pointer-events: auto;
     opacity: 1;
   }
 
-  .modal{
+  .modal1{
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
