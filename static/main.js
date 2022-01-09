@@ -20,6 +20,9 @@ $("path, circle").hover(function(e) {
       return false;
     });
   }
+
+
+  
 // for statment 1 ~ 50 for get state
 
 let state_data = ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 
@@ -32,7 +35,6 @@ let state_data = ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO',
               'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 
               'VT', 'WA', 'WI', 'WV', 'WY'];
 let open = [];
-
 function getValue(st_data){
   var x = document.getElementById(st_data);
   // Push data from here 

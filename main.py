@@ -15,10 +15,14 @@ pop_data = []
 s_data = get_data._data(response_info)
 pop_data = get_data.pop_data(response_info)
 case_data = get_data.act_data_case(response_info)
+deaths_data = get_data.act_data_death(response_info)
+positiveTests_data = get_data.act_data_positiveTests(response_info)
+negativeTests_data = get_data.act_data_negativeTests(response_info)
 
 
 for i in range(len(s_data)):
-    real_data.append(get_data.all_data(s_data[i],pop_data[i]))
+    real_data.append(get_data.all_data(s_data[i],pop_data[i],case_data[i],deaths_data[i],
+                                        positiveTests_data[i], negativeTests_data[i]))
 @app.route("/")
 @app.route("/home")
 def home():

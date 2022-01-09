@@ -30,14 +30,33 @@ case_data = []
 def act_data_case(response_info):
     for i in range(len(response_info)):
         case_data.append(response_info[i]['actuals']['cases'])
-    
-    print(case_data)
     return case_data
 
-# set data numbers )Ex. if 'OR' then return 38 numbers for data
-def all_data(state,pop):
-    return [state, pop]
+death_data = []
+def act_data_death(response_info):
+    for i in range(len(response_info)):
+        death_data.append(response_info[i]['actuals']['deaths'])
+    return death_data
 
+positiveTests_data = []
+def act_data_positiveTests(response_info):
+    for i in range(len(response_info)):
+        positiveTests_data.append(response_info[i]['actuals']['positiveTests'])
+    return positiveTests_data
+
+negativeTests_data = []
+def act_data_negativeTests(response_info):
+    for i in range(len(response_info)):
+        negativeTests_data.append(response_info[i]['actuals']['negativeTests'])
+    return negativeTests_data
+
+# set data numbers )Ex. if 'OR' then return 38 numbers for data
+def all_data(state,pop,case,death,pos,neg):
+    return [state, pop, case,death,pos,neg]
+
+
+
+# dont fix this under area
 def sorting_data(name,state_data,real_data):
     for i in range(len(state_data)):
         if name == state_data[i]:
