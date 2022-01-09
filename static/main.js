@@ -34,21 +34,8 @@ let state_data = ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO',
 let open = [];
 
 function getValue(st_data){
-  // let statement = {
-  //   'state': st_data,
-  // }
-  // const request = new XMLHttpRequest()
-  // request.open('POST', '/statementload/${JSON.stringify(statement)}')
-  // request.onload = () => {
-  //   const flaskMessage = request.responseText
-  //   console.log(flaskMessage)
-  // }
-  // request.send()
-
-
   var x = document.getElementById(st_data);
   // Push data from here 
-  
   const data_container = document.getElementById('data-container');
   const close = document.getElementById('close');
   const open = document.getElementById(st_data)
@@ -64,9 +51,35 @@ function getValue(st_data){
     });
   }
 
+    $.ajax(
+      {
+          type:'POST',
+          contentType:'application/json;charset-utf-08',
+          dataType:'json',
+          url:'http://127.0.0.1:5001/data?value='+st_data ,
+          success:function (data) {
+              var reply=data.reply;
+              if (reply=="success")
+              {
+                  return;
+              }
+              else
+                  {
+                  alert("some error ocured in session agent")
+                  }
+
+          }
+      }
+  );
+ 
+                
+  console.log("st_Data: ");
   console.log(st_data)
+  console.log("x: ");
   console.log(x);
 }
+
+
 // let data_container = []
 for (let i = 0; i < state_data.length; i++) {
   // console.log(state_data[i]);
@@ -75,6 +88,8 @@ for (let i = 0; i < state_data.length; i++) {
   // data_container.push(document.getElementById('data_container' + i))
   
   // console.log('data-contaniner' + i);
+}
+function pass_values() {
   
 }
 

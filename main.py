@@ -20,6 +20,7 @@ def home():
 
 @app.route('/index')
 def index():
+    print("hello")
     return render_template("index.html", s_data=s_data)
 
 # @app.route('/statementload/<string:statement>', methods=['POST'])
@@ -29,9 +30,12 @@ def index():
 #     return 'info Recieved'
 
 
-@app.route('/data')
+@app.route('/data', methods=['POST'])
 def data():
+    name=request.args.get('value')
+    print('name',name)
     return render_template("data.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
