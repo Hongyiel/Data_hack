@@ -19,4 +19,4 @@ def _data(response_info):
         # actual_data(response_info, i)
 
     print(state_data)
-
+    return state_data

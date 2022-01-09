@@ -85,10 +85,11 @@
 
 </svg>
 
-
+<!-- setting the data from main.py (23) render_template("index.html", state_data=state_data) -->
+<!-- we need figure it out how to pass the value from the python data -->
 <div class = "data-container" id = "data-container">
 	<!-- <div class = 'modal'> -->
-		<h1>Modal here</h1>
+		<h1>{{state_data}}</h1>
 	<!-- </div> -->
 	<button id = "close">
 		Close
