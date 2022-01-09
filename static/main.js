@@ -51,7 +51,7 @@ for (let i = 0; i < state_data.length; i++) {
     open[i].addEventListener('click', () => {
       data_container.classList.add('show');
     });
-  
+
     close.addEventListener('click', () => {
       data_container.classList.remove('show');
     });
