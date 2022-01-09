@@ -1,7 +1,7 @@
 import requests
 import json
 import get_data
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, session
 
 app = Flask(__name__)
 
@@ -21,6 +21,13 @@ def home():
 @app.route('/index')
 def index():
     return render_template("index.html", s_data=s_data)
+
+# @app.route('/statementload/<string:statement>', methods=['POST'])
+# def statementload(statement):
+#     statement = json.loads(statement)
+#     print(f"Statement is: {statement['state']}")
+#     return 'info Recieved'
+
 
 @app.route('/data')
 def data():
