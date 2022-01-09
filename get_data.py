@@ -25,6 +25,14 @@ def pop_data(response_info):
 
     return population_data
 
+# adding the data Here...
+case_data = []
+def act_data_case(response_info):
+    for i in range(len(response_info)):
+        case_data.append(response_info[i]['actuals']['cases'])
+    
+    print(case_data)
+    return case_data
 
 # set data numbers )Ex. if 'OR' then return 38 numbers for data
 def all_data(state,pop):
