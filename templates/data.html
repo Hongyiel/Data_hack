@@ -30,24 +30,16 @@
             </div>
         </nav>
 
-        <h1>
-        State: {{return_data[0]}}
-    </h1>
-    <h2>
-        Population: {{return_data[1]}}
-    </h2>
-    <h2>
-        Case: {{return_data[2]}}
-    </h2>
-    <h2>
-        Death: {{return_data[3]}}
-    </h2>
-    <h2>
-        Positive Tests: {{return_data[4]}}
-    </h2>
-    <h2>
-        Negative Tests: {{return_data[5]}}
-    </h2>
+
+            <div class="card border-warning mb-3" style="max-width: 18rem;">
+              <div class="card-header">{{return_data[0]}}</div>
+              <div class="card-body">
+                <h5 class="card-title">Case: {{return_data[2]}}</h5>
+                <p class="card-text">Population: {{return_data[1]}}</p>
+                  <p class="card-text">Death: {{return_data[3]}}</p>
+                  <p class="card-text">Positive Tests: {{return_data[4]}}</p>
+                  <p class="card-text">Negative Tests: {{return_data[5]}}</p>
+              </div>
 
         <!-- Footer-->
         <footer class="py-5" style="background-color: #34383c">
