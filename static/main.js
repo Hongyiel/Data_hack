@@ -56,7 +56,7 @@ function getValue(st_data){
           type:'POST',
           contentType:'application/json;charset-utf-08',
           dataType:'json',
-          url:'https://127.0.0.1:5000/data?value='+st_data ,
+          url:'http://127.0.0.1:5000/data?value='+st_data ,
           success:function (data) {
               var reply=data.reply;
               if (reply=="success")
@@ -81,17 +81,7 @@ function getValue(st_data){
 
 
 // let data_container = []
-for (let i = 0; i < state_data.length; i++) {
-  // console.log(state_data[i]);
-  open.push(document.getElementById(state_data[i]));
 
-  // data_container.push(document.getElementById('data_container' + i))
-  
-  // console.log('data-contaniner' + i);
-}
-function pass_values() {
-  
-}
 
 // state data will be showing getElementById
 // make lots of data_container and show each data in this area
@@ -100,9 +90,6 @@ function pass_values() {
 // 2. pass the data from python
 // 3. setting the data_container[i]
 // 4. setting the getElementById from 'data-container' + i
-
-const data_container = document.getElementById('data-container');
-const close = document.getElementById('close');
 
 
 // get for data from origin data open
