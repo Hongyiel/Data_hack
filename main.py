@@ -30,11 +30,13 @@ def index():
 #     return 'info Recieved'
 
 
-@app.route('/data', methods=['POST'])
+@app.route('/data', methods=['GET', 'POST'])
 def data():
-    name=request.args.get('value')
-    print('name',name)
-    return render_template("data.html")
+    global name
+    if request.method == 'POST':
+        name=request.args.get('value')
+        #print('name',name)
+    return render_template("data.html", name=name)
 
 
 if __name__ == '__main__':
