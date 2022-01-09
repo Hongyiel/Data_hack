@@ -5,6 +5,14 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+response = requests.get("https://api.covidactnow.org/v2/states.json?apiKey=8d65e6de718b4c6da48d818e9a204909").text
+# load data from json parser
+response_info = json.loads(response)
+
+state_data = []
+# Start get_data.py
+state_data = get_data._data(response_info )
+
 @app.route("/")
 @app.route("/home")
 def home():
@@ -12,7 +20,7 @@ def home():
 
 @app.route('/index')
 def index():
-    return render_template("index.html")
+    return render_template("index.html", state_data=state_data)
 
 @app.route('/data')
 def data():
@@ -21,9 +29,4 @@ def data():
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
 
-response = requests.get("https://api.covidactnow.org/v2/states.json?apiKey=8d65e6de718b4c6da48d818e9a204909").text
-# load data from json parser
-response_info = json.loads(response)
 
-# Start get_data.py
-get_data._data(response_info)
