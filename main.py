@@ -9,10 +9,14 @@ response = requests.get("https://api.covidactnow.org/v2/states.json?apiKey=8d65e
 # load data from json parser
 response_info = json.loads(response)
 
-s_data = []
+real_data = []
+pop_data = []
 # Start get_data.py
-s_data = get_data._data(response_info )
+s_data = get_data._data(response_info)
+pop_data = get_data.pop_data(response_info)
 
+for i in range(len(s_data)):
+    real_data.append(get_data.all_data(s_data[i],pop_data[i]))
 @app.route("/")
 @app.route("/home")
 def home():
@@ -29,15 +33,14 @@ def index():
 #     print(f"Statement is: {statement['state']}")
 #     return 'info Recieved'
 
-
+return_data = []
 @app.route('/data', methods=['GET', 'POST'])
 def data():
     global name
     if request.method == 'POST':
         name=request.args.get('value')
-        #print('name',name)
-    return render_template("data.html", name=name)
-
+        # return_data = get_data.sorting_data(name,s_data,real_data)
+    return render_template("data.html", return_data=get_data.sorting_data(name,s_data,real_data))
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
