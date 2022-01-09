@@ -56,7 +56,7 @@ function getValue(st_data){
           type:'POST',
           contentType:'application/json;charset-utf-08',
           dataType:'json',
-          url:'http://127.0.0.1:5000/data?value='+st_data ,
+          url:'https://covid19maps.herokuapp.com//data?value='+st_data ,
           success:function (data) {
               var reply=data.reply;
               if (reply=="success")
