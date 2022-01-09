@@ -22,14 +22,14 @@ $("path, circle").hover(function(e) {
   }
 // for statment 1 ~ 50 for get state
 
-let state_data = ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 
-              'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 
-              'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 
-              'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 
-              'MO', 'MP', 'MS', 'MT', 'NC', 'ND', 
-              'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 
-              'OH', 'OK', 'OR', 'PA', 'PR', 'RI', 
-              'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 
+let state_data = ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO',
+              'CT', 'DC', 'DE', 'FL', 'GA', 'HI',
+              'IA', 'ID', 'IL', 'IN', 'KS', 'KY',
+              'LA', 'MA', 'MD', 'ME', 'MI', 'MN',
+              'MO', 'MP', 'MS', 'MT', 'NC', 'ND',
+              'NE', 'NH', 'NJ', 'NM', 'NV', 'NY',
+              'OH', 'OK', 'OR', 'PA', 'PR', 'RI',
+              'SC', 'SD', 'TN', 'TX', 'UT', 'VA',
               'VT', 'WA', 'WI', 'WV', 'WY']
 let open = []
 for (let i = 0; i < state_data.length; i++) {
@@ -57,5 +57,3 @@ for (let i = 0; i < state_data.length; i++) {
     });
   }
 }
-
-
