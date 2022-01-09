@@ -49,7 +49,8 @@ for (let i = 0; i < state_data.length; i++) {
     //pass
   }else{
     open[i].addEventListener('click', () => {
-      data_container.classList.add('show');
+      //data_container.classList.add('show');
+        $("html").load("/data");
     });
 
     close.addEventListener('click', () => {
