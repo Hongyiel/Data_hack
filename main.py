@@ -14,6 +14,8 @@ pop_data = []
 # Start get_data.py
 s_data = get_data._data(response_info)
 pop_data = get_data.pop_data(response_info)
+case_data = get_data.act_data_case(response_info)
+
 
 for i in range(len(s_data)):
     real_data.append(get_data.all_data(s_data[i],pop_data[i]))
