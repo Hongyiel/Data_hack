@@ -9,9 +9,9 @@ response = requests.get("https://api.covidactnow.org/v2/states.json?apiKey=8d65e
 # load data from json parser
 response_info = json.loads(response)
 
-state_data = []
+s_data = []
 # Start get_data.py
-state_data = get_data._data(response_info )
+s_data = get_data._data(response_info )
 
 @app.route("/")
 @app.route("/home")
@@ -20,7 +20,7 @@ def home():
 
 @app.route('/index')
 def index():
-    return render_template("index.html", state_data=state_data)
+    return render_template("index.html", s_data=s_data)
 
 @app.route('/data')
 def data():
