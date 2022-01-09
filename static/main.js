@@ -92,6 +92,13 @@ const close = document.getElementById('close');
 
 // get for data from origin data open
 // for (let i = 0; i < state_data.length; i++) {
+  // if (open[i] == null){
+  //   //pass
+  // }else{
+  //   open[i].addEventListener('click', () => {
+  //     //data_container.classList.add('show');
+  //       $("html").load("/data");
+  //   });
 
 //   if (open[i] == null){
 //     //pass
