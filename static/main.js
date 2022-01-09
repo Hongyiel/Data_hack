@@ -44,7 +44,7 @@ function getValue(st_data){
       //pass
   }else{
     open.addEventListener('click', () => {
-      data_container.classList.add('show')
+      $("html").load("/data")
     });
     close.addEventListener('click', () => {
       data_container.classList.remove('show');
