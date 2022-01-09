@@ -32,7 +32,7 @@
         <!-- Header - set the background image for the header in the line below-->
         <header class="py-5 bg-image-full" style="background-image: url('https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2089&q=80/1600x900')">
             <div class="text-center my-5">
-                <a type="button" class="btn btn-success" href="index" >show maps</a>
+                <img src="{{ url_for('static', filename='img/osu.PNG') }}" style="width: 100px; height: 100px; margin-bottom: 10px">
                 <h1 class="text-white fs-3 fw-bolder">OSU HACKATHON</h1>
                 <p class="text-white-50 mb-0">Yongsung Cho</p>
                 <p class="text-white-50 mb-0">Hongyiel Suh</p>
@@ -41,10 +41,13 @@
             </div>
         </header>
         <!-- Content section-->
-        <section class="py-5">
+        <section class="py-5" style="margin-top: -50px">
             <div class="container my-5">
                 <div class="row justify-content-center">
-                        <div class="container">
+                    <div class="d-grid gap-2">
+                        <a type="button" class="btn btn-success btn-lg" href="index" >Click here to check COVID-19 cases in the US maps</a>
+                    </div>
+                        <div class="container" style="margin-top: 50px">
                           <div class="row"><!---->
                             <div class="col">
                                 <div style= "width:300px;height:70px;padding:15px;background-color:black;color:white; box-sizing: border-box;text-align:center;">
