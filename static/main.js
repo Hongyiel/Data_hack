@@ -39,7 +39,7 @@ for (let i = 0; i < state_data.length; i++) {
 
 // state data will be showing getElementById
 
-const data_container = document.getElementById('data-container1');
+const data_container = document.getElementById('data-container');
 const close = document.getElementById('close');
 
 // get for data from origin data open
