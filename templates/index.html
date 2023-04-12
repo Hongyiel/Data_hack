@@ -92,15 +92,51 @@
 <!-- if click then id is "AK" then give data from main.py data-->
 
 <!-- set the data-container1, data-container2 ... -->
-<div class = "data-container" id = "data-container">
+<div class = "data-container" id = "data-container" style="background-color: #34383c; margin-top: 500px; margin-left: 1000px">
 	<!-- <div class = 'modal'> -->
 	<!-- if path id is "HI" then give s_data[0] -->
-	{{s_data}}
+{#	{{s_data}}#}
+    <span>sdfsdfsdfsdf</span>
 	<button id = "close">
 		Close
 	</button>
 </div>
 
+
+<div id="show-data" class="card border-warning mb-3" style="max-width: 18rem; margin-left: 10px; margin-top: 10px; display: none">
+    <button id ="close" class="temp">
+		Close
+	</button>
+    <h1 id="states"></h1>
+    <p id="text1">
+        <a>Population : </a>
+        <a id="data1">111</a>
+    </p>
+    <p id="text2">
+        <a>Cases : </a>
+        <a id="data2">22</a>
+    </p>
+    <p id="text3">
+        <a>Deaths : </a>
+        <a id="data3">333</a>
+    </p>
+    <p id="text4">
+        <a>PositiveTests : </a>
+        <a id="data4">4444</a>
+    </p>
+    <p id="text5">
+        <a>NegativeTests : </a>
+        <a id="data5">5555</a>
+    </p>
+{#  <div class="card-header">{{return_data[0]}}</div>#}
+{#  <div class="card-body">#}
+{#      <h5 class="card-pop">Population: {{return_data[1]}}</h5>#}
+{#    <h5 class="card-title">Case: {{return_data[2]}}</h5>#}
+{#      <h5 class="card-title">Death: {{return_data[3]}}</h5>#}
+{#      <h5 class="card-title">Positive Tests: {{return_data[4]}}</h5>#}
+{#      <h5 class="card-title">Negative Tests: {{return_data[5]}}</h5>#}
+{#  </div>#}
+</div>
 
 
 
