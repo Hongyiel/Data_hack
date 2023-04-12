@@ -33,13 +33,18 @@
   }
 
   button {
-    background-color: aquamarine;
+    /*background-color: aquamarine;*/
     border: 0;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
-    color: #fff;
-    font-size: 14px;
-    padding: 10px 25px;
+    /*color: #fff;*/
+    /*font-size: 14px;*/
+    /*padding: 10px 25px;*/
+    float: right;
+    background-color: lightgray;
+    color: black;
+    border-radius: 10px;
+    padding: 5px 5px;
   }
 
   .data-container{
@@ -70,3 +75,15 @@
     max-width: 100%;
     text-align: center;
   }
+
+#show-data {
+  padding: 10px 10px 10px 10px;
+  max-width: 18rem;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: block;
+  position: absolute;
+  width: 300px;
+  left: 30%;
+  top: 30%;
+}
