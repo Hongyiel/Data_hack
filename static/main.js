@@ -40,47 +40,95 @@ function getValue(st_data){
   // Push data from here 
   const data_container = document.getElementById('data-container');
   const close = document.getElementById('close');
-  const open = document.getElementById(st_data)
+  const open = document.getElementById(st_data);
+  const Url = 'https://api.covidactnow.org/v2/state/' + st_data + '.json?apiKey=8d65e6de718b4c6da48d818e9a204909';
+    console.log(Url);
+      $.ajax({
+          url: Url,
+          type: "GET",
+          success: function (result) {
+            const data = JSON.parse(JSON.stringify(result));
+            let populations = data['population'];
+            let cases = data['actuals'].cases;
+            let deaths = data['actuals'].deaths;
+            let positives = data['actuals'].positiveTests;
+            let negatives = data['actuals'].negativeTests;
+            console.log(data['population']);
+            console.log(data['actuals'].cases);
+            console.log(data['actuals'].deaths);
+            console.log(data['actuals'].positiveTests);
+            console.log(data['actuals'].negativeTests);
+            $('#show-data').css('display','block');
+            // $('.text1').text("data['actuals'].cases}");
+            $('#states').text(st_data);
+            $('#data1').text(populations);
+            $('#data2').text(cases);
+            $('#data3').text(deaths);
+            $('#data4').text(positives);
+            $('#data5').text(negatives);
 
-  if (open == null) {
-      //pass
-  }else{
-    open.addEventListener('click', () => {
-      $("html").load("/data")
-    });
-    close.addEventListener('click', () => {
-      data_container.classList.remove('show');
-    });
-  }
-
-    $.ajax(
-      {
-          type:'POST',
-          contentType:'application/json;charset-utf-08',
-          dataType:'json',
-          url:'https://covid19maps.herokuapp.com//data?value='+st_data ,
-          success:function (data) {
-              var reply=data.reply;
-              if (reply=="success")
-              {
-                  return;
-              }
-              else
-                  {
-                  alert("some error ocured in session agent")
-                  }
-
+          },
+          error: function (error) {
+              console.log(error);
           }
-      }
-  );
- 
-                
+      });
+    // console.log(obj);
+
+
+  //
+  // if (open == null) {
+  //     //pass
+  // }else{
+  //   open.addEventListener('click', () => {
+  //     $("html").load("/data")
+  //   });
+  //   close.addEventListener('click', () => {
+  //     data_container.classList.remove('show');
+  //   });
+  // }
+  //
+  //   $.ajax(
+  //     {
+  //         type:'POST',
+  //         contentType:'application/json;charset-utf-08',
+  //         dataType:'json',
+  //         url:'https://covid19map.fly.dev/data?value='+st_data ,
+  //         success:function (data) {
+  //             var reply=data.reply;
+  //             if (reply=="success")
+  //             {
+  //                 return;
+  //             }
+  //             else
+  //                 {
+  //                 alert("some error ocured in session agent")
+  //                 }
+  //
+  //         }
+  //     }
+  // );
+  //
+
   console.log("st_Data: ");
-  console.log(st_data)
+  console.log(st_data);
   console.log("x: ");
   console.log(x);
 }
+// $('path').click(function () {
+//   $('.card .data-container').css('display','none');
+//   $('#show-data').css('display','none');
+//   console.log('testset');
+// })
 
+$('.temp').click(function () {
+  $('#show-data').css('display','none');
+  console.log('tesdftclse');
+});
+
+$('#close').click(function () {
+  $('#show-data').css('display','none');
+  console.log('testclse');
+});
 
 // let data_container = []
 
